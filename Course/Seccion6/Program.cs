@@ -108,7 +108,7 @@ namespace Seccion6
                     Console.WriteLine("arreglo ordenado: " + numbers[j]);
                 }
         }
-        public static  void ejercicio4()
+        public static void ejercicio4()
         {
             var numbers = new List<int>();
 
@@ -129,13 +129,18 @@ namespace Seccion6
             foreach (var number in numbers)
             {
                 if (!lista.Contains(number))
+                {
                     lista.Add(number);
+                }
+                   
             }
-
             Console.WriteLine("lista numeros:");
             foreach (var number in lista)
+            {
                 Console.WriteLine(number);
+            } 
         }
+        //Aplico la solucion de mosh porque me parece mejor
         public static void ejercicio5()
         {
             string[] elements;
