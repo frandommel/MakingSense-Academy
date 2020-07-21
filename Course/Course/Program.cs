@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace Course
 {
@@ -22,7 +23,9 @@ namespace Course
             //Console.WriteLine(numero1);
 
             Persona persona1 = new Estudiante("Gonzalo", "diaz", 22, 1997, "arquitectura");
+
             var claseAnonima = new { FistName = "francisco", LastName = "Dommel", age = 23, year = 1996, carrera = "tup" };
+
             Persona persona2 = new Estudiante(claseAnonima.FistName, claseAnonima.LastName, claseAnonima.age, claseAnonima.year, claseAnonima.carrera);
 
             Persona[] ArrayPersona = new Estudiante[2];
@@ -39,7 +42,7 @@ namespace Course
 
             string nombre = "pedro";
             string apellido = "garcia";
-            string nombreCompleto = string.Format("MI nombre completo es {0} {1}", nombre, apellido);
+            string nombreCompleto = string.Format("Mi nombre completo es {0} {1}", nombre, apellido);
 
             Console.WriteLine(nombreCompleto);
 
@@ -63,6 +66,12 @@ namespace Course
             var mañana = today.AddDays(1);
 
             Console.WriteLine(now.ToShortDateString() + " -Mañana: - " + mañana.Month);
+
+            //Trabajo con stringBuilder
+            var builder = new StringBuilder();
+
+            builder.Append('-', 10)
+                   .AppendLine();
         }
 
     } 
